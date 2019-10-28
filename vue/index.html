@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{name}}</p>
+        <div v-text="name"></div>
+        <p>{{age}}</p>
+        <p>{{doubleAge}}</p>
+        <input type="text" v-model="name" />
+        <button @click="changeName"></button>
+        <div v-html="html"></div>
+    </div>
+    <script src="compile.js"></script>
+    <script src="./vue.js"></script>
+    <script>
+        const app = new Vue({
+                el: '#app',
+                data: {
+                    name: 'lwp',
+                    age: 12,
+                    html: '<button>button</button>',
+
+                },
+                created() {
+                    console.log('开始啦');
+                    setTimeout(() => {
+                        this.name = 'lisi'
+                    }, 1500);
+                },
+                methods: {
+                    changeName() {
+                        this.name = "wangwu";
+                        this.name = 18
+                    }
+                },
+            })
+            // app.$data.name = 'lis';
+            // app.$data.foo.bar = 'xx'
+            // app.$data.foo.bar = 'bar'
+            // let obj = {};
+            // Object.defineProperty(obj, "g", {
+            //     get: function() {
+            //         return document.querySelector('#g').innerHTML;
+            //     },
+            //     set: function(value) {
+            //         document.querySelector('#g').innerHTML = value
+            //     }
+            // });
+            // obj.g = 'Jerry'
+    </script>
+</body>
+
+</html>

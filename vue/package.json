@@ -1,0 +1,17 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vue.js",
+  "dependencies": {
+    "_vue@2.6.10@vue": "^2.6.10",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
